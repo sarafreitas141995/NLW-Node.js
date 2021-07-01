@@ -1,4 +1,4 @@
-# NLW Valoriza
+# Valoriza - API
 
 Api em node.js com acesso a base de dados SQLite. Esta base de dados armazena os utilizadores, tags e elogios. 
 
