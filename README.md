@@ -1,25 +1,28 @@
 # NLW Valoriza
 
+Api em node.js com acesso a base de dados SQLite. Esta base de dados armazena os utilizadores, tags e eligios. 
+
 ## Regras
-- Cadraasto de usuário
 
- [X] Não é permitido cadastrar mais do que um usuário com o mesmo e-mail.
+- Registo do utilizador
 
- [X] Não é permido cadastro usuário sem emial 
+ [X] Não é permitido registar mais do que um utilizador com o mesmo e-mail.
+
+ [X] Não é permido registar um utilizador sem email. 
 
 
-- Cadastro de TAG
+- Registo de TAG
 
- [X] Não é permitido cadastrar mais de uma tag com o mesmo nome
+ [X] Não é permitido registar mais do que uma tag com o mesmo nome.
 
- [X] Não é permitido cadastrar tag sem nome
+ [X] Não é permitido registar uma tag sem nome.
 
- [X] Não é permitido o cadastro por usuarios que nao sejam administradores 
+ [X] Não é permitido o registo das tags ser feito por utilizadores que nao são administradores .
 
-- Cadastro de elogio 
+- Registo de elogio 
 
- [X] Não e permitido um usuario cadastrar um elogio para si 
+ [X] Não é permitido um utilizador registar um elogio para si.
 
- [X] não e permitido cadastratr elogios para usuarios invalidos
+ [X] não e permitido registar elogios para utilizadores inválidos.
 
- [X] o usuario precisa de estar autenticado na aplicação  
+ [X] o utilizador precisa de estar autenticado na aplicação.
