@@ -1,6 +1,6 @@
 # NLW Valoriza
 
-Api em node.js com acesso a base de dados SQLite. Esta base de dados armazena os utilizadores, tags e eligios. 
+Api em node.js com acesso a base de dados SQLite. Esta base de dados armazena os utilizadores, tags e elogios. 
 
 ## Regras
 
