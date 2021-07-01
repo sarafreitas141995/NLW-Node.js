@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer";
 import {Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
 import { v4 as uuid} from "uuid";
 
@@ -15,6 +16,7 @@ class User{
     created_at:Date;
     @UpdateDateColumn()
     updated_at: Date;
+    @Exclude()
     @Column()
     password: string;
 
