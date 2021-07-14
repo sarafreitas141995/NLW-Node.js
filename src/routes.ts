@@ -8,6 +8,7 @@ import { ListUserReceivedComplimentsController}  from "./controllers/ListUserRec
 import { ListUserSendeComplimentsController}  from "./controllers/ListUserSendeComplimentsController";
 import { ListTagsController}  from "./controllers/ListTagsController";
 import { ListUsersController}  from "./controllers/ListUsersController";
+import { SendEmailController}  from "./controllers/SendEmailController";
 
 
 
@@ -22,6 +23,7 @@ const senderController = new ListUserSendeComplimentsController();
 const receivedController = new ListUserReceivedComplimentsController();
 const listTagsController = new ListTagsController();
 const listUsersController = new ListUsersController();
+const sendEmailController = new SendEmailController();
 
 
 
@@ -34,6 +36,8 @@ router.get("/users/compliments/send", ensureAuthenticated,senderController.handl
 router.get("/users/compliments/receive",ensureAuthenticated, receivedController.handle)
 router.get("/tags",ensureAuthenticated, listTagsController.handle)
 router.get("/users",ensureAuthenticated, listUsersController.handle)
+
+router.post("/emails", sendEmailController.handle)
 
 
 
