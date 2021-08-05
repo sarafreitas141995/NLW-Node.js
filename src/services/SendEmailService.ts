@@ -3,38 +3,46 @@ import nodemailer from 'nodemailer';
 interface IEmailRequest {
     to: string,
     from: string,
-    subject: boolean,
-    text: string
+    email: string,
+    subject: string
 }
 
 
-var transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    auth: {
-        user: "email@gmail.com",
-        pass: "****"
-    }
-});
+//var transporter = nodemailer.createTransport({
+//    host: "smtp-mail.outlook.com",
+//    port: 587,
+//    auth: {
+//        user: "saraftfreitas@hotmail.com",
+//        pass: "****"
+//    }
+//});
+
+const  transporter = nodemailer.createTransport({
+    service: "Hotmail",
+      auth: {
+        user: "USERNAME",
+        pass: "PASSWORD"
+      }
+  });
 
 class SendEmailService {
 
-    async execute({ to, from, subject, text }: IEmailRequest) {
+    async execute({ to, from, subject, email }: IEmailRequest) {
 
         var message = {
             from: from,
             to: to,
             subject: subject,
-            text: text
+            email: email
         };
 
         var response = "";
 
          transporter.sendMail(message, function (err, info) {
             if (err) {
-                response = err;
+                response = "Email with a problem." + err;
             } else {
-                response = info;
+                response = "Email sent. " + info;
             }
         });
 

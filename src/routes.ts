@@ -37,7 +37,7 @@ router.get("/users/compliments/receive",ensureAuthenticated, receivedController.
 router.get("/tags",ensureAuthenticated, listTagsController.handle)
 router.get("/users",ensureAuthenticated, listUsersController.handle)
 
-router.post("/emails", sendEmailController.handle)
+//router.post("/emails", sendEmailController.handle)
 
 
 

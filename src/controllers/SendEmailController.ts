@@ -3,13 +3,14 @@ import { SendEmailService } from "../services/SendEmailService";
 
 
 class SendEmailController {
-    async handle(request: Request, response: Response){
-        const {to, from, subject, text} = request.body;
+
+    async SendEmailCreatedUser(email: string, to: string, from: string, subject:string){
+        //const {to, from, subject, text} = request.body;
 
         const sendEmailService = new SendEmailService();
-        const user = await sendEmailService.execute({to, from, subject, text});
+        const emailInfo = await sendEmailService.execute({to, from, subject, email});
 
-        return response.json(user);
+        return emailInfo;
     }
 }
 
